@@ -9,12 +9,14 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material-module';
 import { HomeComponent } from './home/home.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AppointmentsComponent
+    AppointmentsComponent,
+    AppointmentListComponent
   ],
   imports: [
     BrowserModule,
