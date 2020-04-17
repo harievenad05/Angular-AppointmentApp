@@ -21,7 +21,9 @@ router.post('/appointments', (req, res, next) => {
   const payload = { appointmentDate, name, email};
   req.collection.insertOne(payload)
         .then(result => res.json(result.ops[0]))
-        .catch(err => res.send(err))
+        .catch(err => res.status(400).json({
+          message: 'No Appointments Available on that date'
+        }))
 });
 
 router.delete('/appointments/:id', (req, res, next) => {
